@@ -3,6 +3,7 @@ import pandas as pd
 from Predict import pipeline_lr, pipeline_dt, pipeline_rf
 
 app = Flask(__name__)
+port = 5001
 
 
 @app.route('/predictLR', methods=['POST'])
@@ -28,4 +29,4 @@ def predictDT():
 
 
 if __name__ == '__main__':
-    app.run(port=5001)  
+    app.run(port)  
