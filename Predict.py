@@ -204,3 +204,5 @@ score_dt = pipeline_dt.score(X_test, y_test)
 
 print('MSE para Decision Tree:', mse_dt)
 print('R^2 para Decision Tree:', score_dt)
+
+#Tristemente el algoritmo de aprendizaje mas efectivo en esta prueba fue el algoritmo Random Forest, quefue implementado directamente de la librería SciKit Learn
