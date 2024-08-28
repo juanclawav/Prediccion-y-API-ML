@@ -70,3 +70,4 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 39
 ```
+Para utilizar los diferentes algoritmos de aprendizaje solo hace falta editar el link en el comando InvokeWebRequest, a http://127.0.0.1:5000/predictRF (Random Forest), o a http://127.0.0.1:5000/predictDT (Arbol de decisiones)
