@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import pandas as pd
-import os
 from Predict import pipeline_lr, pipeline_dt, pipeline_rf
 
 app = Flask(__name__)
@@ -29,5 +28,4 @@ def predictDT():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use the PORT environment variable or default to 5000
-    app.run(host='0.0.0.0', port=port) 
+    app.run(port=5001)  
