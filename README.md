@@ -33,17 +33,17 @@ pip install -r requirements.txt
 python api.py
 ```
 ### 5. Probar la API
-Abrir una nueva ventana de linea de comando y introducir los siguientes comandos (uno por uno)
+Abrir una nueva ventana de linea de comando PowerShell y introducir los siguientes comandos (uno por uno)
 ```
 $headers = @{'Content-Type' = 'application/json'}  
 
 $body = '{"temperatura": 0.24,"humedad": 0.81,"velocidad_viento": 0,"sensacion_termica": 0.2879,"temporada": 2,"anio":0,"mes": 1,"hora": 7,"dia_semana": 6,"clima": 1,"dia_trabajo": 1,"feriado": 0}'
 
-Invoke-WebRequest -Uri http://127.0.0.1:5000/predictLR -Method POST -Headers $headers -Body $body
+Invoke-WebRequest -Uri http://127.0.0.1:5001/predictLR -Method POST -Headers $headers -Body $body
 ```
 La respuesta debe aparecer inmediatamente en la misma ventana y se ve parecida a esto:
 ```
-Invoke-WebRequest -Uri http://127.0.0.1:5000/predictLR -Method POST -Headers $headers -Body $body
+Invoke-WebRequest -Uri http://127.0.0.1:5001/predictLR -Method POST -Headers $headers -Body $body
 
 
 StatusCode        : 200
@@ -70,4 +70,4 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 39
 ```
-Para utilizar los diferentes algoritmos de aprendizaje solo hace falta editar el link en el comando InvokeWebRequest, a http://127.0.0.1:5000/predictRF (Random Forest), o a http://127.0.0.1:5000/predictDT (Arbol de decisiones)
+Para utilizar los diferentes algoritmos de aprendizaje solo hace falta editar el link en el comando InvokeWebRequest, a http://127.0.0.1:5001/predictRF (Random Forest), o a http://127.0.0.1:5001/predictDT (Arbol de decisiones)
